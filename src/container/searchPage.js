@@ -39,7 +39,7 @@ class searchPage extends Component {
         return (
             <div>
                 <Logo />
-                { (!isLoggedIn()) &&
+                { (isLoggedIn()) &&
                     ( <Link className="logout-link" to="/">Logout</Link>)
                 }
                 <div className="search-container">
