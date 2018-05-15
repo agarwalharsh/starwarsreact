@@ -12,4 +12,3 @@ function mapStateToProps(state) {
 }
 
 export default connect(mapStateToProps, { userActionlogin })(Login);
-//export { connectedLoginPage as Login };

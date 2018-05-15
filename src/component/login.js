@@ -1,13 +1,11 @@
 import React, { Component } from "react";
 import { Button, FormGroup, FormControl, ControlLabel } from "react-bootstrap";
-import '../Login.css';
+import Logo from "./logo";
+import '../css/Login.css';
 
 export default class Login extends Component {
     constructor(props) {
         super(props);
-
-        // reset login status
-        //this.props.dispatch(userActions.logout());
 
         this.state = {
             username: '',
@@ -36,19 +34,17 @@ export default class Login extends Component {
         const { userActionlogin } = this.props;
         const { username, password } = this.state;
 
-        //this.setState({ submitted: true });
-
         userActionlogin({"username": username, "password":password});
     }
 
     render() {
-        //console.log(this.props);
-        //console.log(this.props.state.userLogin);
         const { state } = this.props;
         console.log(state);
         return (
+            <div>
+            <Logo />
             <div className="login">
-                <h1>Login to enter the Star Wars Universe!</h1>
+                <h3>Login to enter the Star Wars Universe!</h3>
 
                 <form onSubmit={this.handleSubmit}>
                     <FormGroup controlId="username" bsSize="large">
@@ -81,6 +77,7 @@ export default class Login extends Component {
                 {state && state.userLogin.failed &&
                     <h5>Incorrect Username/Password</h5>
                 } 
+            </div>
             </div>
         );
     }

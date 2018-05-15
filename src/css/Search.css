@@ -8,7 +8,7 @@
 }
 
 .search-title {
-    font-size: 2.7em;
+    font-size: 1.75em;
 }
 
 .search-input {
@@ -29,4 +29,12 @@
 
 .search-content h5 {
     text-align: center;
+}
+
+.logout-link {
+    font-size: 1.2em;
+    color: black;
+    position: absolute;
+    right: 30px;
+    top: 25px;
 }

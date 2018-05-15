@@ -16,13 +16,15 @@ export function searchPlanetAction (searchString) {
                 dispatch(planetFound({
                     "message": "Planets found",
                     "items": response.results,
-                    "searchStr": searchString
+                    "searchStr": searchString,
+                    "isFetched": true
                 }));
             } else {
                 dispatch(planetNotFound({
                     "message": "No Results",
                     "items": response.results,
-                    "searchStr": searchString
+                    "searchStr": searchString,
+                    "isFetched": true
                 }));
             }
         });

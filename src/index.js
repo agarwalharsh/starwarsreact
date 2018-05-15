@@ -2,13 +2,11 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 import { store, isLoggedIn } from './_store';
-import './index.css';
+import './css/index.css';
 import 'bootstrap/dist/css/bootstrap.css';
 
-//import App from './App';
 import Login from './container/login';
 import searchPage from './container/searchPage';
-import registerServiceWorker from './registerServiceWorker';
 import { Router, Route, browserHistory } from 'react-router';
 import { syncHistoryWithStore } from 'react-router-redux';
 
@@ -23,7 +21,6 @@ const requireAuth = (nextState, replace) => {
 }
 
 ReactDOM.render(
-    //<Login />,
     <Provider store={store}> 
         <Router history={history}>
             <Route path="/" component={Login}/>
@@ -34,5 +31,3 @@ ReactDOM.render(
     </Provider>,
     document.getElementById('root')
 );
-
-registerServiceWorker();

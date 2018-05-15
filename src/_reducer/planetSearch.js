@@ -13,13 +13,15 @@ const planetSearch = (
             console.log(state.items);
             return Object.assign({}, state, {
                 items: action.payload.items,
-                searchStr: action.payload.searchStr
+                searchStr: action.payload.searchStr,
+                isFetched: action.payload.isFetched
             });
 
         case types.PLANET_NOT_FOUND:
             return Object.assign({}, state, {
                 items: action.payload.items,
-                message: action.payload.message
+                message: action.payload.message,
+                isFetched: action.payload.isFetched
             });
 
         default:

@@ -1,7 +1,6 @@
 import * as types from '../_constants'
 import { login } from '../_services';
 import { push } from 'react-router-redux';
-//import { history } from '../_helpers';
 
 var fetchUrl = 'https://swapi.co/api/people/?search=',
     i,
@@ -40,11 +39,6 @@ export function userActionlogin({ username, password }) {
             });
     };
 }
-
-// function logout() {
-//     userService.logout();
-//     return { type: userConstants.LOGOUT };
-// }
 
 function loginSuccess(data) {
     return {

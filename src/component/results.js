@@ -1,27 +1,28 @@
-import React from 'react';
+import React, { Component } from 'react';
 
 
-import '../planets.css';
+import '../css/results.css';
 
 const Results = props => {
-    console.log(props.items);
     return (
-      <ul className="results">
+      <div className="results">
         {props.items.map((item, i) => {
             return (
-                <li className="results__item" key={i}>
+                <div className="result-item-wrap" key={i}>
+                <div className="results__item">
                     <h3 className="results__title">
                         {item.name}
                     </h3>
 
-                <ul className="results__info">
-                    <li>Terrain <span>{item.terrain}</span> </li>
-                    <li>Gravity <span>{item.gravity}</span> </li>
-                    <li>Population <span>{item.population}</span> </li>
-                </ul>
-            </li>)
+                    <div className="results__info">
+                        <div>Diameter- <span>{item.diameter}</span> </div>
+                        <div>Gravity- <span>{item.gravity}</span> </div>
+                        <div>Population- <span>{item.population}</span> </div>
+                    </div>
+            </div>
+            </div>)
         })}
-      </ul>
+      </div>
     )
 };
 
